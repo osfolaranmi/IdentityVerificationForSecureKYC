@@ -79,7 +79,6 @@ window.onload = (event) => {
         if(foundBvn){
             addForm.style.display = "block";
             bvnForm.style.display = "none";
-            console.log("here to help", foundBvn);
  
             setTimeout(()=> {
                 document.getElementById("first_name").value = foundBvn.firstname;
