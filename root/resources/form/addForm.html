@@ -18,7 +18,8 @@
     <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
@@ -31,7 +32,13 @@
     <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rng.js"></script>
     <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa.js"></script>
     <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa2.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <style>
+        #form1 {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,6 +60,35 @@
     </ul>
 
     <div class="tab-content">
+        <div id="bvnForm">
+            <form class="well form-horizontal" id="contact_form">
+                <fieldset>
+                    <legend align="center">Bvn Verification</legend>
+                    <!-- Text input-->
+                    <p class="col-2 text-center">Sample BVN: <br/>( 12345678901, 12345678902,12345678903,12345678904,12345678905  )</p>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">BVN</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="bvn" placeholder="bvn" class="form-control" id="bvnValue"
+                                    type="number" minlength="11" maxlength="11" required>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-info btn-block" id="verifyBvn" >Verify Bvn 
+                                <span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
         <div id="form1" class="tab-pane fade in active">
             <form class="well form-horizontal" id="contact_form">
                 <fieldset>
@@ -65,7 +101,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="Username" placeholder="Username" class="form-control" id="username" type="text">
+                                <input name="Username" placeholder="Username" class="form-control" id="username"
+                                    type="text">
                             </div>
                         </div>
                     </div>
@@ -78,7 +115,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="First Name" placeholder="First Name" class="form-control" id="first_name" type="text">
+                                <input name="First Name" placeholder="First Name" class="form-control" id="first_name"
+                                    type="text">
                             </div>
                         </div>
                     </div>
@@ -90,7 +128,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="Middle Name" placeholder="Middle Name" class="form-control" id="middle_name" type="text">
+                                <input name="Middle Name" placeholder="Middle Name" class="form-control"
+                                    id="middle_name" type="text">
                             </div>
                         </div>
                     </div>
@@ -101,7 +140,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="Last Name" placeholder="Last Name" class="form-control" id="last_name" type="text">
+                                <input name="Last Name" placeholder="Last Name" class="form-control" id="last_name"
+                                    type="text">
                             </div>
                         </div>
                     </div>
@@ -114,7 +154,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="Occupation" placeholder="Occupation" class="form-control" type="text" id="occupation">
+                                <input name="Occupation" placeholder="Occupation" class="form-control" type="text"
+                                    id="occupation">
                             </div>
                         </div>
                     </div>
@@ -126,7 +167,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="Income Range" placeholder="Income Range" class="form-control" type="text" id="income_range">
+                                <input name="Income Range" placeholder="Income Range" class="form-control" type="text"
+                                    id="income_range">
                             </div>
                         </div>
                     </div>
@@ -141,7 +183,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="Date Of Birth" placeholder="Date Of Birth" class="form-control" type="text" id="DOB">
+                                <input name="Date Of Birth" placeholder="Date Of Birth" class="form-control" type="text"
+                                    id="DOB">
                             </div>
                         </div>
                     </div>
@@ -152,13 +195,13 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                                        <input type="radio" name="gender" value="male" id = "gender_m" /> Male
-                                                    </label>
+                                    <input type="radio" name="gender" value="male" id="gender_m" /> Male
+                                </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                                            <input type="radio" name="gender" value="female" id =                                                                 "gender_f" /> Female
-                                                        </label>
+                                    <input type="radio" name="gender" value="female" id="gender_f" /> Female
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -169,7 +212,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="Full Residential Address" placeholder="Full Residential Address" class="form-control" type="text" id="address">
+                                <input name="Full Residential Address" placeholder="Full Residential Address"
+                                    class="form-control" type="text" id="address">
                             </div>
                         </div>
                     </div>
@@ -184,7 +228,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                                <input name="Phone number 1" placeholder="Phone number 1" class="form-control" type="text" id="phone_1">
+                                <input name="Phone number 1" placeholder="Phone number 1" class="form-control"
+                                    type="text" id="phone_1">
                             </div>
                         </div>
                     </div>
@@ -196,7 +241,8 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                                <input name="Phone number 2" placeholder="Phone number 2" class="form-control" type="text" id="phone_2">
+                                <input name="Phone number 2" placeholder="Phone number 2" class="form-control"
+                                    type="text" id="phone_2">
                             </div>
                         </div>
                     </div>
@@ -220,18 +266,20 @@
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                                <input name="Country of Residence" placeholder="Country of Residence" class="form-control" type="text" id="country_res">
+                                <input name="Country of Residence" placeholder="Country of Residence"
+                                    class="form-control" type="text" id="country_res">
                             </div>
                         </div>
                     </div>
 
-                     <!-- Text input-->
-                     <div class="form-group">
+                    <!-- Text input-->
+                    <div class="form-group">
                         <label class="col-md-4 control-label">Bvn</label>
                         <div class="col-md-4 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <input name="Country of Residence" placeholder="Bank verification Number" class="form-control" type="text" id="bvn">
+                                <input name="Country of Residence" placeholder="Bank verification Number"
+                                    class="form-control" type="text" id="bvn">
                             </div>
                         </div>
                     </div>
@@ -251,7 +299,9 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label"></label>
                         <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning" id="addKYCSend" onclick="return onClickAdd()">Send <span class="glyphicon glyphicon-send"></span></button>
+                            <button type="submit" class="btn btn-warning" id="addKYCSend"
+                                onclick="return onClickAdd()">Send <span
+                                    class="glyphicon glyphicon-send"></span></button>
                         </div>
                     </div>
 
